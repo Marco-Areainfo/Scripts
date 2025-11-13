@@ -5,7 +5,7 @@ winget install --id=PDFgear.PDFgear -e  ;
 winget install --id=M2Team.NanaZip -e  ; 
 winget install --id=dotPDN.PaintDotNet -e ;
 winget install --id=CodecGuide.K-LiteCodecPack.Full -e ;
-winget install --id Microsoft.PowerToys -e --scope machine --override "/quiet PowertoysAutostart=false"
+winget install --id=Microsoft.PowerToys -e --scope machine --override "/quiet PowertoysAutostart=false"
 
 Write-Host "Fatto."
 Read-Host -Prompt "Premi Invio per uscire"
