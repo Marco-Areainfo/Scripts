@@ -1,4 +1,3 @@
-# Add-TrustedSites-Interactive.ps1
 # Asks the user for hostnames/IPs to add to Trusted Sites (HKCU)
 
 Write-Host "Inserisci i siti (host o IP) da aggiungere ai Siti attendibili."

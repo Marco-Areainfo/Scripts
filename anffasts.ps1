@@ -1,4 +1,3 @@
-# Add-TrustedSites-HKCU.ps1
 # Adds Trusted Sites entries for the current user (HKCU)
 
 $TrustedSites = @(
