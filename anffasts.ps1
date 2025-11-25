@@ -1,8 +1,8 @@
 # Adds Trusted Sites entries for the current user (HKCU)
 
 $TrustedSites = @(
-  'server',
-  '192.168.1.3'
+  'server01',
+  '192.168.0.1'
 )
 
 $basePath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains'
