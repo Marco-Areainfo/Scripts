@@ -1,0 +1,56 @@
+{
+  "$schema": "https://aka.ms/powertoys-dsc/schemas/2023-10/settings.schema.json",
+  "general": {
+    "startup": false
+  },
+  "modules": {
+    "Awake": {
+      "enabled": false
+    },
+    "ColorPicker": {
+      "enabled": false
+    },
+    "FancyZones": {
+      "enabled": false
+    },
+    "FileLocksmith": {
+      "enabled": false
+    },
+    "Hosts": {
+      "enabled": false
+    },
+    "ImageResizer": {
+      "enabled": false
+    },
+    "KeyboardManager": {
+      "enabled": false
+    },
+    "MouseUtilities": {
+      "enabled": false
+    },
+    "PowerRename": {
+      "enabled": false
+    },
+    "RegistryPreview": {
+      "enabled": false
+    },
+    "ShortcutGuide": {
+      "enabled": false
+    },
+    "TextExtractor": {
+      "enabled": false
+    },
+    "VideoConferenceMute": {
+      "enabled": false
+    },
+    "ExplorerPreview": {
+      "enabled": true,
+      "settings": {
+        "enablePdfPreview": true,
+        "enableSvgPreview": false,
+        "enableMdPreview": false,
+        "enableStlPreview": false
+      }
+    }
+  }
+}
