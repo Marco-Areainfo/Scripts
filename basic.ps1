@@ -7,6 +7,7 @@ winget install --id=dotPDN.PaintDotNet -e -s winget ;
 winget install --id=CodecGuide.K-LiteCodecPack.Full -e -s winget ;
 winget install --id=Microsoft.PowerToys -e -s winget --scope machine 
 
+Write-Host ""
 Write-Host "Fatto."
 Read-Host -Prompt "Premi Invio per uscire"
 exit
