@@ -2,8 +2,8 @@ winget install --id eclipseadoptium.temurin.8.jre ;
 winget install --id karakun.OpenWebStart 
 
 Write-Host ""
-Write-Host	"-------------------------------------------------------------------------------------------"
-Write-Host "Prima di laciare gli applet Java aprire " -nonewline
+Write-Host "-------------------------------------------------------------------------------------------"
+Write-Host "Prima di eseguire gli applet Java aprire " -nonewline
 Write-Host "OpenWebStart Settings > JVM Manager > Find local" -foregroundcolor red
 Write-Host "Dopo andare in " -nonewline
 Write-Host "Settings " -foregroundcolor red -nonewline
