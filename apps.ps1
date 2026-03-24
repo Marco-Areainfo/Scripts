@@ -26,7 +26,7 @@ winget install --id Microsoft.PowerToys -e -s winget --scope machine
 if ($choice -eq 1) {
     winget install --id TheDocumentFoundation.LibreOffice -e -s winget --scope machine
 } else {
-    Write-Host "LibreOffice non verra' installato." -ForegroundColor Yellow
+    Write-Host "LibreOffice non e' stato installato." -ForegroundColor Yellow
 }
 
 Write-Host ""
