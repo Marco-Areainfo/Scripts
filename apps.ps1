@@ -1,4 +1,4 @@
-Write-Host -foregroundcolor red @'
+Write-Host -ForegroundColor Red @'
         **********                                                     **              ****         
       ***       ******                                                                **            
   ******      ***** ****        ********  ******* *******    ********  **  ********  *****  ******* 
