@@ -18,12 +18,12 @@ if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Adm
     Write-Host " NECESSARI PRIVILEGI DI ADMIN" -ForegroundColor Yellow
     Write-Host "==============================" -ForegroundColor Yellow
     Write-Host ""
-    Read-Host "Premere Invio per richiedere privilegi di Administrator"
+    Read-Host "Premere Invio per richiedere privilegi elevati"
     Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"iex (irm '$url')`"" -Verb RunAs
     exit
 }
 
-Write-Host "In esecuzione come Admin" -ForegroundColor Green
+Write-Host "In esecuzione come Administrator" -ForegroundColor Green
 
 Write-Host ""
 Write-Host "TEST"
