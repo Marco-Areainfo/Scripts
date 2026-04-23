@@ -8,6 +8,13 @@ Write-Host -foregroundcolor red @'
 ************************        ********  ***     *******    ********  **  **     **  **    *******    
 '@
 
+$currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
+if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
+    Write-Host "ERRORE: Questo script deve essere eseguitom come Administrator" -ForegroundColor Red
+    pause
+    exit
+}
+
 # Create a self-signed certificate, -Subject can be changed to own company name
 $cert = New-SelfSignedCertificate `
     -Type CodeSigningCert `
