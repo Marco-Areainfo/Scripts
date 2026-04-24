@@ -59,3 +59,5 @@ $rdppath = Read-Host -Prompt "Percorso file .rdp"
 Write-Host $rdppath
 
 rdpsign.exe /sha256 $thumbprint $rdppath
+
+Pause
