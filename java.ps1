@@ -23,5 +23,5 @@ Write-Host "Update strategy " -foregroundcolor red -nonewline
 Write-Host "con " -nonewline
 Write-Host "Do not download any version" -foregroundcolor red
 Write-Host "Eseguire gli applet Java come Administrator al primo avvio"
-Read-Host -Prompt "Premi Invio per uscire"
+Read-Host "Premi Invio per uscire"
 exit

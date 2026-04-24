@@ -40,5 +40,5 @@ Write-Host ""
 Write-Host "Terminato. Log disponible in C:\Logs."
 Write-Host "Per ritentare le installazioni o aggiornare le app eseguire nuovamente lo script."
 Stop-Transcript | Out-Null
-Read-Host -Prompt "Premi Invio per uscire"
+Read-Host "Premi Invio per uscire"
 exit

@@ -27,5 +27,5 @@ Write-Host "In esecuzione come Administrator" -ForegroundColor Green
 
 Write-Host ""
 Write-Host "TEST"
-Read-Host -Prompt "Premi Invio per uscire"
+Read-Host "Premi Invio per uscire"
 exit

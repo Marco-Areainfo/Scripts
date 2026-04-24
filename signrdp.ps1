@@ -24,7 +24,7 @@ if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Adm
 
 Write-Host "In esecuzione come Administrator" -ForegroundColor Green
 
-# Create a self-signed certificate, -Subject can be changed to own company name
+#Create a self-signed certificate, -Subject can be changed to own company name
 $cert = New-SelfSignedCertificate `
     -Type CodeSigningCert `
     -Subject "CN=RDP Publisher, O=Your Organisation, C=AU" `
@@ -33,17 +33,17 @@ $cert = New-SelfSignedCertificate `
     -CertStoreLocation "Cert:\LocalMachine\My" `
     -NotAfter (Get-Date).AddYears(3)
 
-# Export the certificate to C:\
+#Export the certificate to C:\
 Export-Certificate `
     -Cert $cert `
     -FilePath "C:\rdp-signing-public.cer"
 	
-# Import to Trusted Root CA
+#Import to Trusted Root CA
 Import-Certificate `
     -FilePath "C:\rdp-signing-public.cer" `
     -CertStoreLocation "Cert:\LocalMachine\Root"
 	
-# Import to Trusted Publishers
+#Import to Trusted Publishers
 Import-Certificate `
     -FilePath "C:\rdp-signing-public.cer" `
     -CertStoreLocation "Cert:\LocalMachine\TrustedPublisher"
@@ -60,5 +60,5 @@ Write-Host $rdppath
 
 rdpsign.exe /sha256 $thumbprint $rdppath
 
-Read-Host -Prompt Premi Invio per uscire.
+Read-Host Premi Invio per uscire.
 exit
