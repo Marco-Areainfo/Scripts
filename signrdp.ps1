@@ -60,4 +60,5 @@ Write-Host $rdppath
 
 rdpsign.exe /sha256 $thumbprint $rdppath
 
-Pause
+Read-Host -Prompt Terminato.
+exit
