@@ -8,7 +8,7 @@ Write-Host -foregroundcolor red @'
 ************************        ********  ***     *******    ********  **  **     **  **    *******    
 '@
 
-winget install 7zip.7zip -s winget
+winget install pdf24 -s winget
 
 # Write-Host ""
 # Write-Host "TEST"
