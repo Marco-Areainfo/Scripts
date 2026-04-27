@@ -8,9 +8,9 @@ Write-Host -foregroundcolor red @'
 ************************        ********  ***     *******    ********  **  **     **  **    *******    
 '@
 
+winget install 7zip.7zip -s winget
 
-
-Write-Host ""
-Write-Host "TEST"
-Read-Host "Premi Invio per uscire"
-exit
+# Write-Host ""
+# Write-Host "TEST"
+# Read-Host "Premi Invio per uscire"
+# exit
