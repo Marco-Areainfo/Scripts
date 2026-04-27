@@ -1,7 +1,7 @@
 #Check for Admin privileges
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Write-Host "ERRORE: Questo script deve essere eseguitom come Administrator" -ForegroundColor Red
+    Write-Host "ERRORE: Questo script deve essere eseguito come Administrator" -ForegroundColor Red
     pause
     exit
 }

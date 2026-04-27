@@ -1,6 +1,6 @@
 #Define MAC target address,
 # can contain the separators ":" or "-" or the hexadecimal string alone
-$MAC = "00-11-32-E6-F9-6B"
+$MAC = "90-09-D0-3E-CE-74"
 #convert MAC to byte array
 $ByteArray = $MAC -replace "[:\-]" -split "(..)" -ne '' | ForEach-Object { [Byte] "0x$_"}
 #Build Magic Packet according to WOL specs
