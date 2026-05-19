@@ -16,7 +16,7 @@ $choice1 = $host.ui.PromptForChoice("", "Installare anche LibreOffice?", $option
 $options2 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
 $choice2 = $host.ui.PromptForChoice("", "Installare anche Firefox?", $options2, 0)
 
-winget install --id Microsoft.DotNet.Framework.DeveloperPack_4 -e -s winget ; 
+winget install --id Microsoft.DotNet.Framework.Runtime -e -s winget ; 
 winget install --id Google.Chrome -e -s winget ; 
 winget install --id VideoLAN.VLC -e -s winget ; 
 winget install --id PDFgear.PDFgear -e -s winget ; 
