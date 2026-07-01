@@ -15,6 +15,8 @@ $options1 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Y
 $choice1 = $host.ui.PromptForChoice("", "Installare anche LibreOffice?", $options1, 0)
 $options2 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
 $choice2 = $host.ui.PromptForChoice("", "Installare anche Firefox?", $options2, 0)
+$options3 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
+$choice3 = $host.ui.PromptForChoice("", "Installare anche PDF24?", $options3, 0)
 
 winget install --id Microsoft.DotNet.Framework.Runtime -e -s winget ; 
 winget install --id Google.Chrome -e -s winget ; 
@@ -34,6 +36,11 @@ if ($choice2 -eq 1) {
    winget install --id Mozilla.Firefox.it -e -s winget --scope machine
 } else {
     Write-Host "Firefox non e' stato installato." -ForegroundColor Yellow
+}
+if ($choice3 -eq 1) {
+   winget install --id geeksoftwareGmbH.PDF24Creator -e -s winget --scope machine
+} else {
+    Write-Host "PDF24 non e' stato installato." -ForegroundColor Yellow
 }
 
 Write-Host ""
