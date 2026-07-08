@@ -23,4 +23,10 @@ if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Adm
 
 Write-Host "In esecuzione come Administrator" -ForegroundColor Green
 
-#
+#Write log
+$LogPath = "C:\Logs\log_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
+Start-Transcript -Path $LogPath | Out-Null
+
+
+
+Stop-Transcript | Out-Null

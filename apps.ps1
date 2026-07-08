@@ -18,27 +18,27 @@ $choice2 = $host.ui.PromptForChoice("", "Installare anche Firefox?", $options2, 
 $options3 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
 $choice3 = $host.ui.PromptForChoice("", "Installare anche PDF24?", $options3, 0)
 
-winget install --id Microsoft.DotNet.Framework.Runtime -e -s winget ; 
-winget install --id Google.Chrome -e -s winget ; 
-winget install --id VideoLAN.VLC -e -s winget ; 
-winget install --id PDFgear.PDFgear -e -s winget ; 
-winget install --id M2Team.NanaZip -e -s winget ; 
-winget install --id dotPDN.PaintDotNet -e -s winget ;
-winget install --id CodecGuide.K-LiteCodecPack.Full -e -s winget ;
-winget install --id Microsoft.PowerToys -e -s winget --scope machine 
+winget install --id Microsoft.DotNet.Framework.Runtime -e -h -s winget ; 
+winget install --id Google.Chrome -e -h -s winget ; 
+winget install --id M2Team.NanaZip -e -h -s winget ; 
+winget install --id VideoLAN.VLC -e -h -s winget ; 
+winget install --id PDFgear.PDFgear -e -h -s winget ; 
+winget install --id dotPDN.PaintDotNet -e -h -s winget ;
+winget install --id CodecGuide.K-LiteCodecPack.Full -e -h -s winget ;
+winget install --id Microsoft.PowerToys -e -h -s winget --scope machine 
 
 if ($choice1 -eq 1) {
-   winget install --id TheDocumentFoundation.LibreOffice -e -s winget --scope machine
+   winget install --id TheDocumentFoundation.LibreOffice -e -h -s winget 
 } else {
     Write-Host "LibreOffice non e' stato installato." -ForegroundColor Yellow
 }
 if ($choice2 -eq 1) {
-   winget install --id Mozilla.Firefox.it -e -s winget --scope machine
+   winget install --id Mozilla.Firefox.it -e -h -s winget 
 } else {
     Write-Host "Firefox non e' stato installato." -ForegroundColor Yellow
 }
 if ($choice3 -eq 1) {
-   winget install --id geeksoftwareGmbH.PDF24Creator -e -s winget --scope machine
+   winget install --id geeksoftwareGmbH.PDF24Creator -e -h -s winget 
 } else {
     Write-Host "PDF24 non e' stato installato." -ForegroundColor Yellow
 }
