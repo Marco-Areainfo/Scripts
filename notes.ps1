@@ -6,6 +6,8 @@ if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Adm
     exit
 }
 
+
+
 #Check and elevation to Admin
 $url = "https://raw.githubusercontent.com/Marco-Areainfo/Scripts/refs/heads/main/" #Complete with script path (local or remote for irm)
 
@@ -23,10 +25,12 @@ if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Adm
 
 Write-Host "In esecuzione come Administrator" -ForegroundColor Green
 
+
+
 #Write log
 $LogPath = "C:\Logs\log_$(Get-Date -Format 'yyyyMMdd_HHmmss').log"
 Start-Transcript -Path $LogPath | Out-Null
 
-
+	#script here
 
 Stop-Transcript | Out-Null
