@@ -1,4 +1,4 @@
-$url = "https://raw.githubusercontent.com/Marco-Areainfo/Scripts/refs/heads/main/test.ps1"
+$url = "https://raw.githubusercontent.com/Marco-Areainfo/Scripts/refs/heads/main/test_elevate.ps1"
 
 $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
 $isAdmin = $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
