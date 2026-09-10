@@ -1,28 +1,3 @@
-$url = "https://raw.githubusercontent.com/Marco-Areainfo/Scripts/refs/heads/main/appsnw.ps1"
-
-$currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
-$isAdmin = $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-
-if (-not $isAdmin) {
-    Write-Host "==============================" -ForegroundColor Yellow
-    Write-Host " NECESSARI PRIVILEGI DI ADMIN" -ForegroundColor Yellow
-    Write-Host "==============================" -ForegroundColor Yellow
-    Write-Host ""
-
-    $options1 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
-    $choice1 = $host.ui.PromptForChoice("", "Elevare?", $options1, 1)
-
-    if ($choice1 -eq 1) {
-        Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"iex (irm '$url')`"" -Verb RunAs
-        exit
-    } else {
-        Write-Host "Non elevato. Continuo con permessi utente..." -ForegroundColor Yellow
-    }
-} else {
-    Write-Host "In esecuzione come Administrator" -ForegroundColor Green
-}
-
-
 Write-Host -ForegroundColor Red @'
         **********                                                     **              ****         
       ***       ******                                                                **            
@@ -68,16 +43,9 @@ if ($choice3 -eq 1) {
     Write-Host "PDF24 non e' stato installato." -ForegroundColor Yellow
 }
 
-start ms-settings:defaultapps
-
 Write-Host ""
 Write-Host "Terminato. Log disponible in C:\Logs."
 Write-Host "Per ritentare le installazioni o aggiornare le app eseguire nuovamente lo script."
 Stop-Transcript | Out-Null
-$optionsexit = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
-$choiceexit = $host.ui.PromptForChoice("", "Uscire?", $optionsexit, 1)
-if ($choiceexit -eq 1) {
-   exit 
-} else {
-    Write-Host "Terminato." -ForegroundColor Yellow
-}
+Read-Host "Premi Invio per uscire"
+exit
