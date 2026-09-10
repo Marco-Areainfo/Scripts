@@ -74,5 +74,10 @@ Write-Host ""
 Write-Host "Terminato. Log disponible in C:\Logs."
 Write-Host "Per ritentare le installazioni o aggiornare le app eseguire nuovamente lo script."
 Stop-Transcript | Out-Null
-Read-Host "Premi Invio per uscire"
-exit
+$optionsexit = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
+$choiceexit = $host.ui.PromptForChoice("", "Uscire?", $optionsexit, 1)
+if ($choiceexit -eq 1) {
+   exit 
+} else {
+    Write-Host "Terminato." -ForegroundColor Yellow
+}
