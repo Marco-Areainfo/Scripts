@@ -13,7 +13,7 @@ if (-not $isAdmin) {
     $choiceE = $host.ui.PromptForChoice("", "Elevare?", $optionsE, 1)
 
     if ($choiceE -eq 1) {
-        Start-Process powershell.exe -ArgumentList " -Command `"iex (irm '$url')`"" -Verb RunAs
+        Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"iex (irm '$url')`"" -Verb RunAs
         exit
     } else {
         Write-Host "Non elevato. Continuo con permessi utente..." -ForegroundColor Yellow
