@@ -9,10 +9,10 @@ if (-not $isAdmin) {
     Write-Host "==============================" -ForegroundColor Yellow
     Write-Host ""
 
-    $options1 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
-    $choice1 = $host.ui.PromptForChoice("", "Elevare?", $options1, 1)
+    $optionsE = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
+    $choiceE = $host.ui.PromptForChoice("", "Elevare?", $optionsE, 1)
 
-    if ($choice1 -eq 1) {
+    if ($choiceE -eq 1) {
         Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"iex (irm '$url')`"" -Verb RunAs
         exit
     } else {
