@@ -42,6 +42,8 @@ $options2 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Y
 $choice2 = $host.ui.PromptForChoice("", "Installare anche Firefox?", $options2, 0)
 $options3 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
 $choice3 = $host.ui.PromptForChoice("", "Installare anche PDF24?", $options3, 0)
+$options4 = [System.Management.Automation.Host.ChoiceDescription[]] @("&No", "&Yes")
+$choice4 = $host.ui.PromptForChoice("", "Installare anche OpenVPN Connect?", $options4, 0)
 
 winget install --id Microsoft.DotNet.Framework.Runtime -e -h -s winget ; 
 winget install --id Google.Chrome -e -h -s winget ; 
@@ -66,6 +68,11 @@ if ($choice3 -eq 1) {
    winget install --id geeksoftwareGmbH.PDF24Creator -e -h -s winget 
 } else {
     Write-Host "PDF24 non e' stato installato." -ForegroundColor Yellow
+}
+if ($choice4 -eq 1) {
+   winget install --id OpenVPNTechnologies.OpenVPNConnect -e -h -s winget 
+} else {
+    Write-Host "OpenVPN Connect non e' stato installato." -ForegroundColor Yellow
 }
 
 start ms-settings:defaultapps
